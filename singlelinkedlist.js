@@ -99,8 +99,8 @@ var middleNode = function (head) {
         arrayList.push(duplicateHead.data);
         duplicateHead = duplicateHead.next;
     }
-    console.log(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1)
-    const middleNodeValue = arrayList[arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1]
+    console.log(Math.floor(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) - 1))
+    const middleNodeValue = arrayList[Math.floor(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1)]
     console.log(middleNodeValue)
     let current = head;
     while (current && current.data != middleNodeValue) {
