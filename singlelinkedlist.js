@@ -84,12 +84,16 @@ const list = new LinkedList();
 // list.printLinkedList();
 // list.removeNodeFromList(4);
 // list.printLinkedList();
-list.addArrayToList([1, 2, 3, 4, 5])
+list.addArrayToList([1, 2, 3, 4, 5, 6])
 // list.printLinkedList();
 // list.removeListByArray([2])
 // list.printLinkedList();
 
-
+/* 
+    Input: head = [1,2,3,4,5]
+    Output: [3,4,5]
+    Explanation: The middle node of the list is node 3.
+*/
 
 
 var middleNode = function (head) {
@@ -99,8 +103,7 @@ var middleNode = function (head) {
         arrayList.push(duplicateHead.data);
         duplicateHead = duplicateHead.next;
     }
-    console.log(Math.floor(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) - 1))
-    const middleNodeValue = arrayList[Math.floor(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1)]
+    const middleNodeValue = arrayList[Math.floor(arrayList.length / 2)]
     console.log(middleNodeValue)
     let current = head;
     while (current && current.data != middleNodeValue) {
