@@ -84,9 +84,9 @@ const list = new LinkedList();
 // list.printLinkedList();
 // list.removeNodeFromList(4);
 // list.printLinkedList();
-list.addArrayToList([1, 2, 3, 4, 5])
+// list.addArrayToList([1, 2, 3, 4, 5])
 // list.addArrayToList([1, 2, 3, 4, 5, 6])
-// list.addArrayToList([12,86,47,6,23,6,11,30,16,81,62,32,80,61,66,41,8,88,5,98,77,54,24,60,52,32,99,84,81,66,1,25,31,27,70,90,19,54,50,6,72,32,69,88,18,10,75,40,22,97])
+list.addArrayToList([12,86,47,6,23,6,11,30,16,81,62,32,80,61,66,41,8,88,5,98,77,54,24,60,52,32,99,84,81,66,1,25,31,27,70,90,19,54,50,6,72,32,69,88,18,10,75,40,22,97])
 // list.printLinkedList();
 // list.removeListByArray([2])
 // list.printLinkedList();
@@ -119,4 +119,4 @@ const middleNode = (head) => {
     }
     return current;
 };
-middleNode(list.head)
+console.log(middleNode(list.head))
