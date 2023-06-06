@@ -84,7 +84,9 @@ const list = new LinkedList();
 // list.printLinkedList();
 // list.removeNodeFromList(4);
 // list.printLinkedList();
-list.addArrayToList([1, 2, 3, 4, 5, 6])
+list.addArrayToList([1, 2, 3, 4, 5])
+// list.addArrayToList([1, 2, 3, 4, 5, 6])
+// list.addArrayToList([12,86,47,6,23,6,11,30,16,81,62,32,80,61,66,41,8,88,5,98,77,54,24,60,52,32,99,84,81,66,1,25,31,27,70,90,19,54,50,6,72,32,69,88,18,10,75,40,22,97])
 // list.printLinkedList();
 // list.removeListByArray([2])
 // list.printLinkedList();
@@ -93,23 +95,28 @@ list.addArrayToList([1, 2, 3, 4, 5, 6])
     Input: head = [1,2,3,4,5]
     Output: [3,4,5]
     Explanation: The middle node of the list is node 3.
+
+
+    Constraints:
+    The number of nodes in the list is in the range [1, 100].
+    1 <= Node.val <= 100
 */
 
 
-var middleNode = function (head) {
+const middleNode = (head) => {
     let arrayList = []
     let duplicateHead = JSON.parse(JSON.stringify(head))
     while (duplicateHead) {
         arrayList.push(duplicateHead.data);
         duplicateHead = duplicateHead.next;
     }
-    const middleNodeValue = arrayList[Math.floor(arrayList.length / 2)]
-    console.log(middleNodeValue)
+    const index = Math.floor(arrayList.length / 2)
     let current = head;
-    while (current && current.data != middleNodeValue) {
+    let i = 0;
+    while (current && current.data && i != index) {
         current = current.next;
+        i++;
     }
-    console.log(current);
     return current;
 };
 middleNode(list.head)
