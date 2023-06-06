@@ -1,8 +1,9 @@
 // create a single node
+// Node class represents each element (node) in the linked list
 class elementNode {
     constructor(data) {
-        this.data = data;
-        this.next = null;
+        this.data = data; // Holds the data for the node
+        this.next = null; // Reference to the next node (initially null)
     }
 }
 
@@ -83,8 +84,29 @@ const list = new LinkedList();
 // list.printLinkedList();
 // list.removeNodeFromList(4);
 // list.printLinkedList();
-list.addArrayToList([1, 2, 3,4,5,6,7])
-list.printLinkedList();
-list.removeListByArray([2])
-list.printLinkedList();
+list.addArrayToList([1, 2, 3, 4, 5])
+// list.printLinkedList();
+// list.removeListByArray([2])
+// list.printLinkedList();
 
+
+
+
+var middleNode = function (head) {
+    let arrayList = []
+    let duplicateHead = JSON.parse(JSON.stringify(head))
+    while (duplicateHead) {
+        arrayList.push(duplicateHead.data);
+        duplicateHead = duplicateHead.next;
+    }
+    console.log(arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1)
+    const middleNodeValue = arrayList[arrayList.length % 2 == 0 ? arrayList.length / 2 : (arrayList.length / 2) + 1]
+    console.log(middleNodeValue)
+    let current = head;
+    while (current && current.data != middleNodeValue) {
+        current = current.next;
+    }
+    console.log(current);
+    return current;
+};
+middleNode(list.head)
