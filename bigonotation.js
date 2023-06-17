@@ -17,3 +17,23 @@ for (let j = 0; j < lists1.length; j++) { // runs 6 times
     O(n) for single dataset list
     o(n * a) for double dataset list
 */
+// O(n) for single dataset list
+// const lists = ['a', 'b', 'c'];
+// for (let i = 0; i < lists.length; i++) { // runs square of base n
+//     console.log(lists[i], lists[j]);
+// }
+// o(n * a) for double dataset list
+// const lists = ['a', 'b', 'c'];
+// const lists1 = [1, 2, 3, 4, 5, 6];
+// for (let j = 0; j < lists1.length; j++) { // runs 6 times
+//     for (let i = 0; i < lists.length; i++) { // runs 18  times for each outer loop items it runs the 3 times
+//         console.log(lists[i], lists1[j]);
+//     }
+// }
+//  O(n^2) for single dataset list of twice running
+// const lists = ['a', 'b', 'c'];
+// for (let j = 0; j < lists.length; j++) { // runs 3 times
+//     for (let i = 0; i < lists.length; i++) { // runs square of base n
+//         console.log(lists[i], lists[j]);
+//     }
+// }
