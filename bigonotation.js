@@ -51,3 +51,7 @@ for (let j = 0; j < lists1.length; j++) { // runs 6 times
 // for (let i = 0; i < lists.length; i++) { // runs square of base n
 //     console.log(lists[i], lists[j]);
 // }
+/*
+    we don't want to care about the slowly growing n because it doesn't affect the performance
+    we care about n^2 times
+*/
