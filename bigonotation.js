@@ -81,3 +81,17 @@ for (let i = 0; i < spaceComplexity.length; i++) {
     }
 }
 console.log(duplicateArray);
+// O(log n) for time complexity
+function logn(n) {
+    if (n === 0) return 'Done';
+    n = Math.floor(n / 2);
+    return n + ' ' + logn(n);
+}
+console.log(logn(4));
+
+function logn1(n) {
+    while (n > 1) {
+        n = Math.floor(n / 2);
+    }
+}
+console.log(logn1(4));
