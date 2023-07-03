@@ -2,6 +2,7 @@
  * 
  * @param {*} n number to be takens as to run deep
  * @returns 
+ * @description time complexity of this function is O(2^n)
  */
 function fib(n) {
     if (n === 0) {
