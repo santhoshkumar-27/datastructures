@@ -6,7 +6,6 @@ function mergeSort(array) { // o(logn)
     const middleIndex = Math.floor(array.length / 2);
     const leftArray = array.slice(0, middleIndex);
     const rightArray = array.slice(middleIndex);
-
     return merge(mergeSort(leftArray), mergeSort(rightArray)); // o(n)
 }
 /**
@@ -30,9 +29,10 @@ function merge(leftArray, rightArray) {
         }
     }
     // any remaining item in the array of leftArray and rightArray will get pushed
-    return resultArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
+    resultArray = resultArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
+    return resultArray
 }
 
-let arr = [12, 3 , 16, 5, 2, 9];
-
+// let arr = [12, 3 , 16, 5, 2, 9];
+let arr = [12, 3 , 16, 5, 0];
 console.log(mergeSort(arr))
