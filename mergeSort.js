@@ -5,7 +5,7 @@ function mergeSort(array) { // o(logn)
 
     const middleIndex = Math.floor(array.length / 2);
     const leftArray = array.slice(0, middleIndex);
-    const rightArray = array.slice(middleIndex);
+    const rightArray = array.slice(middleIndex); // Divide and conquer
     return merge(mergeSort(leftArray), mergeSort(rightArray)); // o(n)
 }
 /**
