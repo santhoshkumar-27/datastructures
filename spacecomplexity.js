@@ -1,5 +1,5 @@
 /**
- * @description space complexity of the countDown function
+ * @description space complexity of the countDown function O(n)
  * 
  * countDown(5)
  *      |
